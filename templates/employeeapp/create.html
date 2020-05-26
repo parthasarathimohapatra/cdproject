@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{%extends 'employeeapp/base.html'%}
+   {%block base_block%}
+   <div class="container">
+     <h1>-:Insert New Employee:-</h1><hr>
+     <form action="" method="post">
+      {{form.as_p}}
+      {%csrf_token%}
+      <input type="submit" class='btn btn-primary btn-lg' value="Insert">
+
+     </form>
+
+   </div>
+
+   {%endblock%}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{%extends 'employeeapp/base.html'%}
+     {% block base_block %}
+     <h1>-:Employee Information:-</h1><hr>
+     <table border="2">
+       <thead>
+         <th>Employee Id</th>
+         <th>Employee Number</th>
+         <th>Employee Name</th>
+         <th>Employee Location</th>
+         <th>StartTiming</th>
+         <th>EndTiming</th>
+         <th>Actinons</th>
+       </thead>
+       {% for emp in employee %}
+       <tr>
+         <td>{{emp.id}}</td>
+         <td>{{emp.eno}}</td>
+         <td>{{emp.ename}}</td>
+         <td>{{emp.ecity}}</td>
+         <td>{{emp.start_time}}</td>
+         <td>{{emp.end_time}}</td>
+         <td><a href="/update/{{emp.id}}">Update</a>  <a href="/delete/{{emp.id}}">Delete</a> </td>
+
+       </tr>
+       {% endfor %}
+
+     </table>
+     <br>
+
+     <a href="/create" class="btn btn-success">Insert New Employee</a>
+
+     {%endblock%}

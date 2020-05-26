@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{%extends 'employeeapp/base.html'%}
+  {% block base_block %}
+  <div class="container" >
+    <h1>-:Employee Update Form:-</h1><hr>
+   <form method="post">
+     Employee Id :: <input type="text" name="id" value="{{emp.id}}"><br><br>
+     Employee Number :: <input type="text" name="eno" value="{{emp.eno}}"><br><br>
+     Employee Name :: <input type="text" name="ename" value="{{emp.ename}}"><br><br>
+     Employee City Name :: <input type="text" name="ecity" value="{{emp.ecity}}"><br><br>
+     Start Time :: <input type="text" name="start_time" value="{{emp.start_time}}"><br><br>
+     End Time :: <input type="text" name="end_timec" value="{{emp.end_time}}"><br><br>
+     {%csrf_token%}
+     <input type="submit" class="btn btn-warning btn-lg"  value="Update Record"><br><br>
+
+
+
+   </form>
+
+
+  </div>
+  {% endblock %}
